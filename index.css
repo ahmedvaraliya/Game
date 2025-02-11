@@ -1,0 +1,368 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes snowFall {
+  0% { transform: translateY(-100px); opacity: 0.8; }
+  100% { transform: translateY(100vh); opacity: 1; }
+}
+
+.snow {
+  position: absolute;
+  top: -50px;
+  background-color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: snowFall linear infinite;
+  z-index: 0;
+}
+
+.snow:nth-child(even) {
+  animation-duration: 6s;
+}
+.snow:nth-child(odd) {
+  animation-duration: 8s;
+}
+
+.snow {
+  left: calc(100% * var(--random-x));
+  animation-delay: calc(var(--random-delay));
+}
+
+.container {
+  text-align: center;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.scores {
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 20px;
+  z-index: 2; 
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell.X {
+  background-color: #ffcc00; 
+  color: black;
+}
+
+.cell.O {
+  background-color: #0099ff;
+  color: white;
+}
+
+body {
+  cursor: url('https://www.rw-designer.com/cursor-creator/img/3d-cursor/cursor2-35.png'), auto;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+  .board {
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
+  }
+}
+
+ */
+
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+    background: url('clouds.jpg') no-repeat center center fixed;
+    background-size: cover;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(45deg, black, white);
+  background-size: 400% 400%; 
+  animation: gradientBackground 5s ease infinite;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif; */
+  font-family: Arial, sans-serif;
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  background: url(cloud.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(360deg, black, white);
+  /* background-size: 400% 400%; */
+  /* animation: gradientBackground 5s ease infinite; */
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  }
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(45deg, black, white);
+    }
+    50% {
+      background-position: 100% 50%;
+      background-image: linear-gradient(45deg, white, black);
+    }
+    100% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(45deg, black, white);
+    }
+  }
+  
+  
+@keyframes snowFall {
+  0% { transform: translateY(-100px); opacity: 0.8; }
+  100% { transform: translateY(100vh); opacity: 1; }
+}
+
+.snow {
+  position: absolute;
+  top: -50px;
+  background-color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: snowFall linear infinite;
+  z-index: 0;
+}
+
+.snow:nth-child(even) {
+  animation-duration: 6s;
+}
+.snow:nth-child(odd) {
+  animation-duration: 8s;
+}
+
+.snow {
+  left: calc(100% * var(--random-x));
+  animation-delay: calc(var(--random-delay));
+}
+
+.container {
+  text-align: center;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  width: 90%; /* Ensures it is responsive */
+  max-width: 400px; /* Prevents it from being too wide on large screens */
+}
+
+.class-1{
+  text-decoration: underline #fff;
+  color: #fff;
+}
+.class-2{
+  color: #45a049;
+  text-decoration: underline #45a049;
+}
+.class-3{
+  color: #0099ff;
+  text-decoration: underline #0099ff;
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+.scores {
+  margin-bottom: 20px;
+}
+.para {
+  font-size: 20px;
+  color: #fff;
+}
+.para-1{
+  font-size: 20px;
+  color: #0099ff;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 20px;
+  z-index: 2;
+  max-width: 340px; /* Keeps board from stretching too wide */
+  margin: 0 auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell.X {
+  background-color: #fff;
+  color: black;
+}
+
+.cell.O {
+  background-color: #0099ff;
+  color: white;
+}    
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+background-color: #323633;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .board {
+    width: 260px;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 90%; /* Keeps the container responsive */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+  }
+
+  .cell {
+    width: 70px;
+    height: 70px;
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 10px;
+        display: block;
+        margin: auto;
+    width: 245px;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduces header size on smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .board {
+    width: 195px;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .container {
+    width: 90%;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
