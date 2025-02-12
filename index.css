@@ -135,22 +135,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  }
-  @keyframes gradientBackground {
-    0% {
-      background-position: 0% 50%;
-      background-image: linear-gradient(45deg, black, white);
-    }
-    50% {
-      background-position: 100% 50%;
-      background-image: linear-gradient(45deg, white, black);
-    }
-    100% {
-      background-position: 0% 50%;
-      background-image: linear-gradient(45deg, black, white);
-    }
-  }
-  
+}
   
 
 .container {
