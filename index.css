@@ -16,34 +16,6 @@ body {
   position: relative;
 }
 
-@keyframes snowFall {
-  0% { transform: translateY(-100px); opacity: 0.8; }
-  100% { transform: translateY(100vh); opacity: 1; }
-}
-
-.snow {
-  position: absolute;
-  top: -50px;
-  background-color: white;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  animation: snowFall linear infinite;
-  z-index: 0;
-}
-
-.snow:nth-child(even) {
-  animation-duration: 6s;
-}
-.snow:nth-child(odd) {
-  animation-duration: 8s;
-}
-
-.snow {
-  left: calc(100% * var(--random-x));
-  animation-delay: calc(var(--random-delay));
-}
-
 .container {
   text-align: center;
   background-color: #333;
@@ -180,33 +152,6 @@ body {
   }
   
   
-@keyframes snowFall {
-  0% { transform: translateY(-100px); opacity: 0.8; }
-  100% { transform: translateY(100vh); opacity: 1; }
-}
-
-.snow {
-  position: absolute;
-  top: -50px;
-  background-color: white;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  animation: snowFall linear infinite;
-  z-index: 0;
-}
-
-.snow:nth-child(even) {
-  animation-duration: 6s;
-}
-.snow:nth-child(odd) {
-  animation-duration: 8s;
-}
-
-.snow {
-  left: calc(100% * var(--random-x));
-  animation-delay: calc(var(--random-delay));
-}
 
 .container {
   text-align: center;
